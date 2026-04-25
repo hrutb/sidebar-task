@@ -1,0 +1,80 @@
+*{ 
+     margin:0; 
+     padding:0;
+     box-sizing:border-box;;
+} 
+
+
+.section{ 
+
+     height:300px;
+     width:100%; 
+
+} 
+
+.sidebar{ 
+     width:300px;
+     height:100vh;
+     position:fixed;
+     background-color:black; 
+     left:0;
+     top:0;
+     z-index:2;
+      transition: all 0.5s ease-in-out;
+} 
+
+
+
+
+.overlay{ 
+   left:0;
+   top:0; 
+   position:fixed;
+   background-color:rgb(0,0,0,.6); 
+   height:150vh;
+   width:100% ;
+   z-index:1;
+    
+
+}  
+
+
+.sideBarClose{ 
+      position:absolute;
+      color:#fff;
+      top:10px;
+      right:10px;
+      transition: all 0.5s ease-in-out; 
+      cursor:pointer;
+} 
+
+.sideBarOpen{ 
+      position:absolute; 
+      left:0; 
+
+}  
+
+
+.active{ 
+    transform:translateX(-100%);
+} 
+
+
+
+.overlay .active{ 
+       
+  animation: fade 0.3s  ease-in-out;
+} 
+
+
+ 
+@keyframes fade{ 
+   from{
+      opacity:0;  
+   } 
+   to{ 
+     opacity:100;
+   }
+
+} 
+ 
